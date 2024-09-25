@@ -1,1 +1,156 @@
-AI magazin
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagazinByAI</title>
+    <style>
+        /* Grundlegendes Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #282828;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #00ffcc;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        /* Musikbereich */
+        #music {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .track {
+            background-color: #333333;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h3 {
+            margin-top: 0;
+            color: #00ffcc;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #282828;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Suche */
+        .search-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #search {
+            padding: 10px;
+            width: 60%;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        /* Für kleine Bildschirme */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            #search {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MmmagazinByAI</h1>
+        <p>Entdecke tiefe Klänge und entspannende Tracks! Jetzt neu GPTvoice!</p>
+    </header>
+
+    <!-- Suchfeld -->
+    <div class="search-container">
+        <input type="text" id="search" onkeyup="searchTracks()" placeholder="Suche nach Musik...">
+    </div>
+
+    <section id="music">
+        <div class="track" data-title="welcome">
+            <h3>1 Folge: GPTvoice AI Willkommen!</h3>
+            <audio controls>
+                <source src="audio/ai_welcome.mp3" type="audio/mpeg">
+                Dein Browser unterstützt das Audio-Element nicht.
+            </audio>
+        </div>
+
+        <div class="track" data-title="raspberry">
+            <h3>2 Folge: GPTvoice Raspberry Pi</h3>
+            <audio controls>
+                <source src="audio/raspberry.mp3" type="audio/mpeg">
+                Dein Browser unterstützt das Audio-Element nicht.
+            </audio>
+        </div>
+
+        <div class="track" data-title="Ocean Breeze">
+            <h3>Track 3: Ocean Breeze</h3>
+            <audio controls>
+                <source src="audio/ocean-breeze.mp3" type="audio/mpeg">
+                Dein Browser unterstützt das Audio-Element nicht.
+            </audio>
+        </div>
+
+        <!-- Weitere Tracks können hinzugefügt werden -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Deep Music. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script>
+        // Suchfunktion für die Musikstücke
+        function searchTracks() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let tracks = document.getElementsByClassName('track');
+            
+            for (let i = 0; i < tracks.length; i++) {
+                let title = tracks[i].getAttribute('data-title').toLowerCase();
+                if (title.includes(input)) {
+                    tracks[i].style.display = '';
+                } else {
+                    tracks[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
