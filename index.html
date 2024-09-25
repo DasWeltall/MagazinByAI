@@ -29,8 +29,8 @@
             font-size: 1.2em;
         }
 
-        /* Musikbereich */
-        #music {
+
+        #magazin {
             max-width: 800px;
             margin: 30px auto;
             padding: 20px;
@@ -100,39 +100,30 @@
 
     <!-- Suchfeld -->
     <div class="search-container">
-        <input type="text" id="search" onkeyup="searchTracks()" placeholder="Suche nach Musik...">
+        <input type="text" id="search" onkeyup="searchTracks()" placeholder="Search magazines...">
     </div>
 
-    <section id="music">
+    <section id="magazin">
         <div class="track" data-title="welcome">
             <h3>1 Folge: GPTvoice AI Willkommen!</h3>
-            <audio controls>
-                <source src="audio/ai_welcome.mp3" type="audio/mpeg">
-                Dein Browser unterstützt das Audio-Element nicht.
-            </audio>
+            
         </div>
 
-        <div class="track" data-title="raspberry">
+        <div class="magazin" data-title="raspberry">
             <h3>2 Folge: GPTvoice Raspberry Pi</h3>
-            <audio controls>
-                <source src="audio/raspberry.mp3" type="audio/mpeg">
-                Dein Browser unterstützt das Audio-Element nicht.
-            </audio>
+            
         </div>
 
-        <div class="track" data-title="Ocean Breeze">
+        <div class="magazin" data-title="Ocean Breeze">
             <h3>Track 3: Ocean Breeze</h3>
-            <audio controls>
-                <source src="audio/ocean-breeze.mp3" type="audio/mpeg">
-                Dein Browser unterstützt das Audio-Element nicht.
-            </audio>
+
         </div>
 
         <!-- Weitere Tracks können hinzugefügt werden -->
     </section>
 
     <footer>
-        <p>&copy; 2024 Deep Music. Alle Rechte vorbehalten.</p>
+        <p>MagazinByAI-Magazines from ChatGPT</p>
     </footer>
 
     <script>
