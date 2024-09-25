@@ -36,7 +36,7 @@
             padding: 20px;
         }
 
-        .track {
+        .gpt {
             background-color: #333333;
             margin: 15px 0;
             padding: 15px;
@@ -49,10 +49,6 @@
             color: #00ffcc;
         }
 
-        audio {
-            width: 100%;
-            margin-top: 10px;
-        }
 
         footer {
             background-color: #282828;
@@ -104,22 +100,18 @@
     </div>
 
     <section id="magazin">
-        <div class="track" data-title="welcome">
+        <div class="gpt" data-title="anti">
             <h3>1 Folge: GPTvoice AI Willkommen!</h3>
             
         </div>
-
-        <div class="magazin" data-title="raspberry">
+        <div class="gpt" data-title="raspberry">
             <h3>2 Folge: GPTvoice Raspberry Pi</h3>
             
         </div>
-
-        <div class="magazin" data-title="Ocean Breeze">
+        <div class="gpt" data-title="Ocean Breeze">
             <h3>Track 3: Ocean Breeze</h3>
 
         </div>
-
-        <!-- Weitere Tracks können hinzugefügt werden -->
     </section>
 
     <footer>
@@ -130,7 +122,7 @@
         // Suchfunktion für die Musikstücke
         function searchTracks() {
             let input = document.getElementById('search').value.toLowerCase();
-            let tracks = document.getElementsByClassName('track');
+            let tracks = document.getElementsByClassName('gpt');
             
             for (let i = 0; i < tracks.length; i++) {
                 let title = tracks[i].getAttribute('data-title').toLowerCase();
